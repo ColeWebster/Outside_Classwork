@@ -1,20 +1,21 @@
 console.log('This is from a different file');
 
 //Document Object Model -- DOM
+const notes = [{
+    title: "My next trip",
+    body: "I would like to go to Japan",
+}, {
+    title: "Habbits to work on",
+    body: "Exercise. Eating better."
+}, {
+    title: "Office modifications",
+    body: "Add better lights"
+}]
 
-// ---------- Query and remove - first item only. 
-// const p = document.querySelector('p');
-// p.remove();
-
-// -------- Query all and remove
-const ps = document.querySelectorAll('p');
-ps.forEach(function(p) {
-    p.remove();
+document.querySelector('button').addEventListener('click', function (e) {
+    e.target.textContent = "The button was clicked"
 })
-// For each loops over each item to remove all p tags
 
-// ------- Loop to add p tag and replace 
-ps.forEach(function (p) {
-    p.textContent = '*****'
-    // console.log(p.textContent)
+document.querySelectorAll('button')[1].addEventListener('click', function () {
+    console.log('Delete All Notes')
 })
